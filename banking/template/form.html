@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Form</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <!-- Font Awesome Cdn Link -->
+   <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' %}"/>
+</head>
+<body>
+  <div class="wrapperform">
+    <h3>User Details</h3>
+
+    <form action="msg" method="post">
+      {% csrf_token %}
+      <label>Name:</label><br>
+            <input type="text" name="name" placeholder="Enter your name"><br>
+      <label>DOB:</label><br>
+            <input type="date" name="date" placeholder="Date of Birth"><br>
+      <label>Age:</label><br>
+            <input type="number" name="age" placeholder="Enter age"><br>
+      <label>Gender:</label><br>
+            <label>Male</label><input type="radio" name="gender" value="Male"><br>
+            <label>Female</label><input type="radio" name="gender" value="Female"><br>
+
+      <label>Phone Number:</label><br>
+             <input type="number" name="phoneno" placeholder="Enter phone number"><br>
+      <label>Mail ID:</label><br>
+                <input type="email" name="email" placeholder="Enter your email"><br>
+      <label>Address:</label><br>
+                <input type="text" name="address" placeholder="Enter your address"><br>
+
+      <label>District:</label><br>
+        <div class="col-xs-6">
+            <select class="form-control" name="select1" id="select1">
+                <option value="1">Alappuzha</option>
+                <option value="2">Ernakulam</option>
+                <option value="3">Idukki</option>
+                <option value="4">Kannur</option>
+                <option value="5">Kollam</option>
+                <option value="6">Trivandrum</option>
+            </select>
+        </div>
+
+        <label>Branch:</label><br>
+        <div class="col-xs-6">
+            <select class="form-control" name="select2" id="select2">
+                 <option value="1">Cherthala</option>
+                 <option value="1">Ambalappuzha</option>
+                 <option value="1">Chengannur</option>
+                 <option value="2">Kochi</option>
+                 <option value="2">Aluva</option>
+                 <option value="2">Angamaly</option>
+                 <option value="3">Munnar</option>
+                 <option value="3">Thodupuzha</option>
+                 <option value="4">Iritty<option>
+                 <option value="5">Parippally<option>
+                 <option value="5">Paravur<option>
+                 <option value="5">Anchal<option>
+                 <option value="6">Varkala<option>
+                 <option value="6">Kazhakootam<option>
+                 <option value="6">Attingal<option>
+            </select>
+        </div>
+
+
+
+      <label for="account">Account Type:</label><br>
+      <select id="account" name="account"><br>
+          <option value="current">Current Account</option>
+          <option value="savings">Savings Account</option>
+      </select><br>
+
+      <label>Materials provide:</label><br>
+        <label for="credit"> Credit Card</label><br>
+        <input type="checkbox" id="credit" name="credit" value="credit"><br>
+        <label for="debit"> Debit Card</label><br>
+        <input type="checkbox" id="debit" name="debit" value="debit"><br>
+        <label for="cheque"> Cheque Book</label><br>
+        <input type="checkbox" id="cheque" name="cheque" value="cheque"><br>
+        <label for="internet"> Internet Banking</label><br>
+        <input type="checkbox" id="internet" name="internet" value="internet"><br>
+
+      <a href='sub'><button>SUBMIT</button></a>
+
+    </form>
+        <a href='/'><button>LOGOUT</button></a>
+
+  </div>
+</body>
+</html>
